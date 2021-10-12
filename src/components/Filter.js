@@ -15,7 +15,7 @@ export default class Filter extends Component {
         </div>
         <div className="filter-size">
           Filter{" "}
-          <select value={this.props.size} onChange={this.props.sizeProducts}>
+          <select value={this.props.size} onChange={this.props.filterProducts}>
             <option value="ALL">ALL</option>
             <option value="XS">XS</option>
             <option value="S">S</option>
