@@ -39,10 +39,8 @@ class App extends React.Component {
 
   filterProducts(event) {
     if (event.target.value === "") {
-      alert("if");
       this.setState({ size: event.target.value, products: data.products });
     } else {
-      alert("else");
       this.setState({
         size: event.target.value,
         products: data.products.filter(
