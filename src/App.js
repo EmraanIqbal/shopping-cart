@@ -11,12 +11,16 @@ class App extends React.Component {
       size: "",
       sort: "",
     };
+    this.filterProducts = this.filterProducts.bind(this);
+    this.sortProducts = this.sortProducts.bind(this);
   }
 
-  sortProducts(event) {}
+  sortProducts(event) {
+    console.log(event.target.value);
+  }
 
   filterProducts(event) {
-    if (event.target.value === "") {
+    if (event.target.value === " ") {
       this.setState({ size: event.target.value, products: data.products });
     } else {
       this.setState({
@@ -41,7 +45,7 @@ class App extends React.Component {
                 size={this.state.size}
                 sort={this.state.sort}
                 filterProducts={this.filterProducts}
-                sizeProducts={this.sizeProducts}
+                sortProducts={this.sortProducts}
               />
               <Products products={this.state.products}></Products>
             </div>
