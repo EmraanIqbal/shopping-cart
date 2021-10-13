@@ -23,11 +23,11 @@ class App extends React.Component {
         .slice()
         .sort((a, b) =>
           sort === "lowest"
-            ? a.price < b.price
+            ? a.price > b.price
               ? 1
               : -1
             : sort === "highest"
-            ? a.price > b.price
+            ? a.price < b.price
               ? 1
               : -1
             : a._id > b._id
