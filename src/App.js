@@ -38,7 +38,7 @@ class App extends React.Component {
   }
 
   filterProducts(event) {
-    if (event.target.value === "") {
+    if (event.target.value === "ALL") {
       this.setState({ size: event.target.value, products: data.products });
     } else {
       this.setState({
@@ -50,6 +50,7 @@ class App extends React.Component {
     }
   }
   render() {
+    console.log("products>>", this.state.products);
     return (
       <div className="grid-container">
         <header>
